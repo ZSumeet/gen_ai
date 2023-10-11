@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatbot_styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div id="clear-container">
+    <button id="clear-button"><i class="fas fa-eraser"></i></button>
+    <div class="switch-container">
+      <label class="switch">
+          <input type="checkbox" id="modeSwitcher">
+          <span class="slider round"></span>
+      </label>
+      <span></span>
+    </div>
+  
+  </div>
+  <div id="chat-history-container">
+    <div id="new-button">
+      <button id="new-button"> + New Chat</button>
+    </div>
+    </div>
+    
+  <div id="conversation-container">
+  </div>
+  <div id="input-container">
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <div id="send-button-container">
+      <button id="send-button">&#10147;</button>
+    </div>
+  </div>
+
+  <!-- <div class="switch-container">
+    <label class="switch">
+        <input type="checkbox" id="modeSwitcher">
+        <span class="slider round"></span>
+    </label>
+    <span>OAI Mode</span>
+  </div> -->
+
+  <script src="{{ url_for('static', filename='chatbot_ui.js') }}"></script>
+</body>
+</html>
